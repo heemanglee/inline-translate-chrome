@@ -32,7 +32,7 @@ Translator API와 Language Pack 지원 상태는 Chrome 버전 및 환경에 따
 1. 이 저장소를 클론하거나 다운로드합니다.
 
    ```bash
-   git clone https://github.com/<username>/inline-translate-chrome.git
+   git clone https://github.com/heemanglee/inline-translate-chrome.git
    ```
 
 2. Chrome 주소창에서 `chrome://extensions`를 엽니다.
