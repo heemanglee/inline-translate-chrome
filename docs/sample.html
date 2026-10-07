@@ -1,0 +1,163 @@
+<!doctype html>
+<!-- Sample page for README screenshots. Serve over HTTP (python3 -m http.server) so the 번역하기 context menu appears. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reading in Two Languages</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --color-page: oklch(97.5% 0.008 85);
+      --color-ink: oklch(20% 0.01 60);
+      --color-muted: oklch(48% 0.01 60);
+      --color-accent: oklch(52% 0.11 160);
+      --color-rule: oklch(86% 0.012 85);
+      --color-row: oklch(95% 0.01 85);
+
+      --font-serif: "Iowan Old Style", "Charter", "Palatino Linotype", Georgia, serif;
+      --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+      --text-kicker: 0.8125rem;
+      --text-body: 1.0625rem;
+      --text-lede: 1.25rem;
+      --text-h2: 1.5rem;
+      --text-h1: clamp(2.25rem, 1.6rem + 2.6vw, 3rem);
+
+      --measure: 42rem;
+      --space-gutter: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--color-page);
+      color: var(--color-ink);
+      font: var(--text-body) / 1.7 var(--font-sans);
+    }
+
+    main {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: clamp(2.5rem, 6vw, 4.5rem) var(--space-gutter) 4rem;
+    }
+
+    .kicker {
+      margin: 0 0 0.75rem;
+      color: var(--color-accent);
+      font-size: var(--text-kicker);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { margin: 0 0 1rem; font-size: var(--text-h1); }
+
+    h2 {
+      margin: 2.75rem 0 0.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-rule);
+      font-size: var(--text-h2);
+    }
+
+    .lede {
+      margin: 0 0 0.5rem;
+      color: var(--color-muted);
+      font-family: var(--font-serif);
+      font-size: var(--text-lede);
+      line-height: 1.55;
+    }
+
+    p { margin: 0 0 1rem; }
+
+    a {
+      color: var(--color-accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { text-decoration-thickness: 2px; }
+
+    a:focus-visible {
+      outline: 2px solid var(--color-accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+
+    li { margin-bottom: 0.5rem; }
+
+    li::marker { color: var(--color-accent); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9375rem;
+    }
+
+    th, td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--color-rule);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      border-bottom: 2px solid var(--color-ink);
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) { background: var(--color-row); }
+
+    footer {
+      margin-top: 3rem;
+      color: var(--color-muted);
+      font-size: var(--text-kicker);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <p class="kicker">Reading Notes</p>
+      <h1>Reading in Two Languages at Once</h1>
+      <p class="lede">Keeping the original text next to a translation lets you check the meaning without losing the author's voice.</p>
+
+      <h2>Why keep the original?</h2>
+      <p>A translation is always an interpretation. When the source sentence stays on the page, you can compare word choices, spot <strong>technical terms</strong> that should stay as they are, and return to the <a href="#modes">original wording</a> whenever something feels off.</p>
+
+      <h2>A few habits that help</h2>
+      <ul>
+        <li>Read the English sentence first, then glance at the translation.</li>
+        <li>Mark unfamiliar terms and look them up in context.</li>
+        <li>Turn the translation off when you want to practice on your own.</li>
+      </ul>
+
+      <h2 id="modes">Choosing a reading mode</h2>
+      <table>
+        <thead>
+          <tr><th>Reading mode</th><th>Best for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Original only</td><td>Practicing comprehension</td></tr>
+          <tr><td>Translation only</td><td>Skimming a long article</td></tr>
+          <tr><td>Side by side</td><td>Learning and careful review</td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <footer translate="no">
+      <p>Sample page for Inline Translate for Chrome.</p>
+    </footer>
+  </main>
+</body>
+</html>

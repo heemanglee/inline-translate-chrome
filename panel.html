@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>문단 아래 한국어</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <main>
+    <span class="eyebrow">EN → KO · 기기에서 번역</span>
+    <h1>문단 아래 한국어</h1>
+    <p class="intro">영어는 그대로.<br>한국어는 바로 아래에.</p>
+    <button id="translate" class="primary">현재 페이지 번역</button>
+    <div class="actions">
+      <button id="stop" disabled>중지</button>
+      <button id="remove">번역 지우기</button>
+    </div>
+    <section class="status-box" aria-label="번역 상태">
+      <p id="status" role="status" aria-live="polite">번역할 페이지에서 확장 아이콘을 누른 뒤 시작하세요.</p>
+      <progress id="progress" max="100" value="0" hidden></progress>
+      <p id="detail" class="detail"></p>
+    </section>
+    <p class="note">첫 실행에는 번역 모델을 내려받습니다. 준비가 끝나면 기기에서 번역합니다.</p>
+    <p class="note">번역 중에는 이 패널을 열어 두세요. 새로 나타난 문단은 번역 버튼을 다시 누르면 추가됩니다.</p>
+    <p class="note">일반 웹페이지의 제목·문단·목록·표를 지원합니다. 이미지 속 글자, PDF, iframe 안의 글자는 포함하지 않습니다.</p>
+    <button id="restart" class="restart">확장 다시 시작</button>
+  </main>
+  <script type="module" src="panel.mjs"></script>
+</body>
+</html>

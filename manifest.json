@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "문단 아래 한국어",
+  "version": "1.0.3",
+  "description": "영어 원문 아래에 한국어 번역을 표시합니다. Chrome 내장 번역을 사용하며 구독과 API 키가 필요 없습니다.",
+  "minimum_chrome_version": "138",
+  "permissions": ["activeTab", "scripting", "sidePanel", "contextMenus"],
+  "action": { "default_title": "문단 아래 한국어" },
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "panel.html" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_security_policy": { "extension_pages": "script-src 'self'; object-src 'none'" }
+}
